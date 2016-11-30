@@ -1,0 +1,16 @@
+#!/usr/local/bin/fontforge
+Open($1)
+CIDFlatten()
+Generate($1:r + ".ttf")
+Close()
+
+Open($1:r + ".ttf")
+
+Select(0u0020)
+Copy()
+Select(0u2f9f4)
+Paste()
+SelectNone()
+
+Generate($1:r + ".svg")
+Close()
